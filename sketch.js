@@ -1,3 +1,4 @@
+var gamestate = "play";
 var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
 var packageBody,ground
 const Engine = Matter.Engine;
@@ -52,18 +53,19 @@ function draw() {
 	packageSprite.y= packageBody.position.y 
 
 	
-	if (keyPressed(DOWN_ARROW)){
+	if (keyPressed(DOWN_ARROW) && gamestate == "play"){
 		packageBody.position.y += 3; 
 		helicopterSprite.y += 3;
 	}
 	
-	if (keyPressed(UP_ARROW)){
+	if (keyPressed(UP_ARROW) && gamestate == "play"){
 
 		packageBody.position.y -= 3; 
 		helicopterSprite.y -= 3;
 	}
 	if (keyPressed(RIGHT_ARROW)){
-		Body.setStatic(packageBody, false)
+		Body.setStatic(packageBody, false);
+		gamestate = "false";
 	}
 
 	drawSprites();

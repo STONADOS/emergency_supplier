@@ -24,7 +24,7 @@ function setup() {
 	helicopterSprite.addImage(helicopterIMG);
 	helicopterSprite.scale=0.6;
 
-	groundSprite=createSprite(400, 700, 800, 50);
+	groundSprite=createSprite(400, 700, 800, 40);
 	groundSprite.shapeColor=color(255);
 
 
@@ -37,7 +37,7 @@ function setup() {
 
 
 	//Create a Ground
-	ground = Bodies.rectangle(400, 700, 800, 50 , {isStatic:true});
+	ground = Bodies.rectangle(400, 700, 800, 40 , {isStatic:true});
  	World.add(world, ground);
 
 

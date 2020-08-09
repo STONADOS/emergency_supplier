@@ -53,15 +53,6 @@ function draw() {
 	packageSprite.y= packageBody.position.y 
 
 	if (keyPressed(DOWN_ARROW)){
-		packageBody.position.y += 3; 
-		helicopterSprite.y += 3;
-	}
-
-	if (keyPressed(UP_ARROW)){
-		packageBody.position.y -= 3; 
-		helicopterSprite.y -= 3;
-	}
-	if (keyPressed(RIGHT_ARROW)){
 		Body.setStatic(packageBody, false);
 	}
 
